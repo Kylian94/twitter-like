@@ -27,7 +27,7 @@
         <div class="col-6 d-flex align-items-center justify-content-center bg-white">
                 
                 <div class="d-flex flex-column justify-content-center col-6">
-                    <i class="fa fa-linode text-info fa-3x mr-3"></i>
+                    <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
                     <h1 class="font-weight-bold mt-2">Découvrez ce qui se passe dans le monde en temps réel</h1>
                     <h6 class="font-weight-bold mt-5">Rejoignez Twitter aujourd'hui.</h6>
                     <a class="btn btn-info text-white font-weight-bold btn-rounded mt-3" href="{{ route('register') }}">S'inscrire</a>

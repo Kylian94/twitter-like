@@ -4,9 +4,9 @@
 <div class="container">
     <div class="d-flex align-items-center justify-content-center vh-100">
         <div class="col-md-8">
-            <div class="card border-0 rounded-card">
-                <div class="card-header bg-white border-bottom-0 d-flex justify-content-center">
-                    <i class="fa fa-linode text-info fa-3x mr-3"></i>
+            <div class="card rounded-card border-info">
+                <div class="pt-3  border-info border-bottom-0 d-flex justify-content-center">
+                    <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
                 </div>
 
                 <div class="card-body">
