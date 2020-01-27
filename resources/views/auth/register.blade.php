@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.template')
 
 @section('content')
 <div class="container">
@@ -64,10 +64,11 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-6 offset-md-4 d-flex align-items-center">
                                 <button type="submit" class="btn btn-rounded btn-info text-white font-weight-bold">
                                     S'inscrire
                                 </button>
+                                <a href="{{ route('login') }}" class="small ml-4 text-info">Pas encore inscrit ? Cliquez ici</a>
                             </div>
                         </div>
                     </form>

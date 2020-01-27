@@ -11366,6 +11366,10 @@ a:hover {
   color: #6db1eb;
 }
 
+.active {
+  color: #6db1eb;
+}
+
 .bg-home-visitor {
   background-image: url(/images/bg-home-visitor.jpg?0279034765fe73785ca21caa10b39638);
   background-size: cover;
