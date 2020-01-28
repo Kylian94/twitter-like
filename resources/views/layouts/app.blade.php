@@ -43,19 +43,41 @@
                     <!-- MODAL TWEET -->
                     <div class="modal fade" id="modalTweet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
-                            <div class="modal-content">
+                            <div class="modal-content border-0">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
+                                
+                                <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" class="text-info">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <div class="d-flex col-12 p-0">
+                                    <div class="col-2 p-0">
+                                        <img class="img-profil rounded-circle" src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" srcset="">
+                                    </div>
+                                    <div class="col-10 d-flex flex-column p-0 mt-2">
+                                        <div class="col-12 p-0">
+                                            <textarea class="inputTweet col-12 p-0" autofocus type="text" placeholder="What's happening ?"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex col-12 align-items-center mt-3">
+                                    <div class="col-2">
+                                    
+                                    </div>
+                                    <div class="col-10 d-flex flex-column p-0">
+                                        <div class="w-100 d-flex justify-content-between align-items-center mb-1">
+                                            <div class="col-3 d-flex align-items-center p-0">
+                                                <i class="fa fa-picture-o text-info mr-3 fa-2x" aria-hidden="true"></i>
+                                                <i class="fa fa-smile-o text-info fa-2x" aria-hidden="true"></i>
+                                            </div>
+                                            <div class="col-3">
+                                                    <a href="#" class="btn btn-info text-white btn-rounded px-4">Tweet</a>
+                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             </div>
                         </div>

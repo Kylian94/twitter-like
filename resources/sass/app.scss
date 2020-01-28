@@ -69,3 +69,21 @@ h5 {
     height:70px;
     object-fit: cover;
 }
+.inputTweet {
+    border: 0;
+    font-size: 28px;
+    color: #3f3f3f;
+}
+.inputTweet:focus {
+    outline: 0;
+    border-bottom: 2px solid #6DB1EB;
+    
+}
+.inputTweet:active {
+    outline: 0;
+    border-bottom: 2px solid #6DB1EB;
+}
+.modal-content {
+    width:600px;
+    border-radius:20px;
+}
