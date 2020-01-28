@@ -27,11 +27,11 @@
                     <div class="col-3 d-flex justify-content-center border-right">
                         <div class="d-flex col-10 flex-column mt-3">
                             <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
-                            <a href="/" class="d-flex align-items-center mt-5 {{ Request::path() == '/' ? 'active' : '' }}">
+                            <a href="/" class="d-flex align-items-center mt-5 {{ Request::path() == '/' ? 'text-primary' : '' }}">
                                 <i class="fa fa-home fa-2x mr-3"></i>
                                 <h4 class="font-weight-bold m-0">Home</h4>
                             </a>
-                        <a href="{{ route('profile') }}" class="d-flex align-items-center mt-4 {{ Request::path() == 'profile' ? 'active' : '' }}">
+                        <a href="{{ route('profile') }}" class="d-flex align-items-center mt-4 {{ Request::path() == 'profile' ? 'text-primary' : '' }}">
                                 <i class="fa fa-user-o fa-2x mr-3"></i>
                                 <h4 class="font-weight-bold m-0">Profile</h4>
                             </a>
