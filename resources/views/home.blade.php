@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="col-12 col-md-6 border-left border-right main-part p-0">
         <div class="d-flex flex-column align-items-start">
             <!-- HEADER PART -->
@@ -149,6 +148,4 @@
             </div>
         </div>   
     </div>
-
-
 @endsection

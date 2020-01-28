@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
     <div class="col-12 col-md-6 main-part border-left border-right p-0">
         <!-- HEADER PART -->
         <div class="px-3">
@@ -174,8 +173,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-                
+        </div>        
     </div>
-    
 @endsection
