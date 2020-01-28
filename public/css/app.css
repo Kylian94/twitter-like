@@ -11545,3 +11545,7 @@ h5 {
   left: 290px;
 }
 
+.main-part {
+  min-height: 100vh;
+}
+

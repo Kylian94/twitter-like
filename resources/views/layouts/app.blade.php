@@ -24,7 +24,7 @@
     <div id="app">
         <main>
                 <div class="d-flex ">
-                    <div class="col-3 border-right d-none d-md-block">
+                    <div class="col-3 d-none d-md-block">
                         <div class="d-flex justify-content-center ">
                             <div class="d-flex col-10 flex-column mt-3">
                                 <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
@@ -87,7 +87,7 @@
                     </div>
                     
                     @yield('content')
-                    <div class="col-3 border-left d-none d-md-block">
+                    <div class="col-3 d-none d-md-block">
                         <div class="d-flex col-10 flex-column mt-3">
                             <div class="d-flex align-items-center mt-2">
                                 <a class="btn btn-rounded btn-outline-info text-info w-100" href="{{ route('logout') }}"

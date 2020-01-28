@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <div class="col-12 col-md-6 vh-100 ">
+    <div class="col-12 col-md-6 border-left border-right main-part">
         <div class="d-flex flex-column align-items-start p-2">
             <div class="d-flex align-items-center justify-content-sm-between mt-2">
                 <div class="col-2 p-0 d-md-none">
@@ -88,7 +88,7 @@
                         <div class="col-2">
                         
                         </div>
-                        <div class="col-10 d-flex flex-column p-0 ">
+                        <div class="col-11 d-flex flex-column p-0 ">
                             <div class="w-100 d-flex justify-content-between align-items-center mb-3">
                                 <div class="col-3 d-flex align-items-center p-0">
                                     <i class="fa fa-picture-o text-info mr-3 fa-2x" aria-hidden="true"></i>

@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="col-12 col-md-6 vh-100 p-0">
+    <div class="col-12 col-md-6 main-part border-left border-right p-0">
         <div class="px-3">
             <div class="d-flex align-items-center mt-3">
                     <a href="/">
