@@ -11448,3 +11448,22 @@ h5 {
   border-radius: 20px;
 }
 
+.img-profil-user {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 0;
+}
+
+.img-cover {
+  position: relative;
+  height: 150px;
+  background-color: #c7c7c7;
+}
+
+.edit-profile {
+  position: absolute;
+  top: 190px;
+}
+
