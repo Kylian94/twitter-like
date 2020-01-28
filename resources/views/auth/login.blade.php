@@ -58,13 +58,20 @@
                                 <button type="submit" class="btn btn-rounded btn-info text-white font-weight-bold">
                                     Se connecter
                                 </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
+                                <a href="{{ route('register') }}" class="small ml-4 text-info">Pas encore inscrit ? Cliquez ici</a>
+                                
+                            </div>
+                            <div class="col-10 offset-1">
+                                    <hr class="my-3" style="border-bottom: 0.5px #eeeeee solid; border-top: 0;">
+                            </div>
+                            
+                            <div class="col-md-8 offset-md-2 text-center">
+                            @if (Route::has('password.request'))
+                                    <a class="small text-info " href="{{ route('password.request') }}">
+                                        Mot de passe oublié ?
                                     </a>
                                 @endif
-                            </div>
+                                </div>
                         </div>
                     </form>
                 </div>

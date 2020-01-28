@@ -68,7 +68,7 @@
                                 <button type="submit" class="btn btn-rounded btn-info text-white font-weight-bold">
                                     S'inscrire
                                 </button>
-                                <a href="{{ route('login') }}" class="small ml-4 text-info">Pas encore inscrit ? Cliquez ici</a>
+                                <a href="{{ route('login') }}" class="small ml-4 text-info">Vous avez déja un compte ? Cliquez ici</a>
                             </div>
                         </div>
                     </form>

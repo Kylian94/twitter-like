@@ -11,8 +11,13 @@
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    if (Auth::check()) {
+        return view('home');
+    } else {
+        return view('welcome');
+    }
 });
 
 Auth::routes();
