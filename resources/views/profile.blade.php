@@ -84,7 +84,7 @@
         <div class="tab-content mb-5 " id="myTabContent">
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <div class="border-bottom post rounded">
-                    <div class=" d-flex flex-column align-items-center justify-content-center col-12 mt-3 rounded">
+                    <div class=" d-flex flex-column align-items-center justify-content-center col-12 pt-3 rounded">
                         <div class="d-flex justify-content-between col-12 pt-3">
                             <div class="titleCategory d-flex ">
                                 <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
@@ -113,7 +113,7 @@
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                 <div class="border-bottom post rounded">
-                    <div class=" d-flex flex-column align-items-center justify-content-center col-12 mt-3 rounded">
+                    <div class=" d-flex flex-column align-items-center justify-content-center col-12 pt-3 rounded">
                         <div class="d-flex justify-content-between col-12 pt-3">
                             <div class="titleCategory d-flex ">
                                 <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
@@ -142,7 +142,7 @@
             </div>
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                 <div class="border-bottom post rounded">
-                    <div class=" d-flex flex-column align-items-center justify-content-center col-12 mt-3 rounded">
+                    <div class=" d-flex flex-column align-items-center justify-content-center col-12 pt-3 rounded">
                         <div class="d-flex justify-content-between col-12 pt-3">
                             <div class="titleCategory d-flex ">
                                 <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>

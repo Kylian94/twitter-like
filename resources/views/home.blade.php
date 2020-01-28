@@ -3,25 +3,28 @@
 @section('content')
 
 
-    <div class="col-12 col-md-6 border-left border-right main-part">
-        <div class="d-flex flex-column align-items-start p-2">
-            <div class="d-flex align-items-center justify-content-sm-between mt-2">
-                <div class="col-2 p-0 d-md-none">
-                <a href="{{route('profile')}}">
-                    <img class="img-profil-mobile rounded-circle" src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" srcset="">
-                </a>
+    <div class="col-12 col-md-6 border-left border-right main-part p-0">
+        <div class="d-flex flex-column align-items-start">
+            <div class="px-3">
+                <div class="d-flex align-items-center justify-content-sm-between mt-2">
+                    <div class="col-2 p-0 d-md-none">
+                    <a href="{{route('profile')}}">
+                        <img class="img-profil-mobile rounded-circle" src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" srcset="">
+                    </a>
+                    </div>
+                    <h3 class="font-weight-bold col-sm-10 ml-4 mt-2">Accueil</h3>
                 </div>
-                <h3 class="font-weight-bold col-sm-10 ml-4">Accueil</h3>
             </div>
+            
                 
-                <div class="col-12 p-0">
-                        <hr>
-                </div>
-                
-                <a class="btn btn-mobile-tweet btn-info text-white fixed-bottom d-md-none d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#modalTweetMobile"><i class="fa fa-bandcamp text-white fa-3x "></i></a>
-                <div class="modal fade " id="modalTweetMobile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content-mobile border-0">
+            <div class="col-12 p-0">
+                    <hr>
+            </div>
+            
+            <a class="btn btn-mobile-tweet btn-info text-white fixed-bottom d-md-none d-flex align-items-center justify-content-center" data-toggle="modal" data-target="#modalTweetMobile"><i class="fa fa-bandcamp text-white fa-3x "></i></a>
+            <div class="modal fade " id="modalTweetMobile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content-mobile border-0">
                             <div class="modal-header">
                                 
                                 <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
@@ -57,13 +60,13 @@
                                     </div>
                                 </div>
                             </div>
-                            </div>
                         </div>
                     </div>
-                    
-                <span class="d-none d-md-block col-12">
-                    <div class="d-flex col-12 p-0">
-                        <div class="col-2 p-0">
+                </div>
+                <!-- TWEET ACTION PART HOME -->
+                <span class="d-none d-md-block col-12 p-0">
+                    <div class="d-flex col-12 px-3">
+                        <div class="col-2 p-0 ml-2">
                             <img class="img-profil rounded-circle" src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" srcset="">
                         </div>
                         <div class="col-10 d-flex flex-column p-0 mt-2">
@@ -90,7 +93,7 @@
                         </div>
                     </div>
                 </span>
-
+                <!-- TWEETS LIST PART HOME -->
                 <div class="border-bottom post rounded">
                     <div class=" d-flex flex-column align-items-center justify-content-center col-12 mt-3 rounded">
                         <div class="d-flex justify-content-between col-12 pt-3">
