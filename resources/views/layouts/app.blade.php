@@ -23,67 +23,71 @@
 <body>
     <div id="app">
         <main>
-                <div class="d-flex">
-                    <div class="col-3 d-flex justify-content-center border-right">
-                        <div class="d-flex col-10 flex-column mt-3">
-                            <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
-                            <a href="/" class="d-flex align-items-center mt-5 {{ Request::path() == '/' ? 'text-primary' : '' }}">
-                                <i class="fa fa-home fa-2x mr-3"></i>
-                                <h4 class="font-weight-bold m-0">Home</h4>
-                            </a>
-                        <a href="{{ route('profile') }}" class="d-flex align-items-center mt-4 {{ Request::path() == 'profile' ? 'text-primary' : '' }}">
-                                <i class="fa fa-user-o fa-2x mr-3"></i>
-                                <h4 class="font-weight-bold m-0">Profile</h4>
-                            </a>
-                            <div class="d-flex align-items-center mt-4">
-                                <button href="#" data-toggle="modal" data-target="#modalTweet" class="btn btn-info text-white btn-rounded col-12 ">Tweet</button>
+                <div class="d-flex ">
+                    <div class="col-3 border-right d-none d-md-block">
+                        <div class="d-flex justify-content-center ">
+                            <div class="d-flex col-10 flex-column mt-3">
+                                <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
+                                <a href="/" class="d-flex align-items-center mt-5 {{ Request::path() == '/' ? 'text-primary' : '' }}">
+                                    <i class="fa fa-home fa-2x mr-3"></i>
+                                    <h4 class="font-weight-bold m-0">Accueil</h4>
+                                </a>
+                            <a href="{{ route('profile') }}" class="d-flex align-items-center mt-4 {{ Request::path() == 'profile' ? 'text-primary' : '' }}">
+                                    <i class="fa fa-user-o fa-2x mr-3"></i>
+                                    <h4 class="font-weight-bold m-0">Profil</h4>
+                                </a>
+                                <div class="d-flex align-items-center mt-4">
+
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- MODAL TWEET -->
-                    <div class="modal fade" id="modalTweet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content border-0">
-                            <div class="modal-header">
-                                
-                                <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true" class="text-info">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="d-flex col-12 p-0">
-                                    <div class="col-2 p-0">
-                                        <img class="img-profil rounded-circle" src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" srcset="">
-                                    </div>
-                                    <div class="col-10 d-flex flex-column p-0 mt-2">
-                                        <div class="col-12 p-0">
-                                            <textarea class="inputTweet col-12 p-0" autofocus type="text" placeholder="What's happening ?"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex col-12 align-items-center mt-3">
-                                    <div class="col-2">
+                        <a class="btn btn-rounded btn-info text-white d-none d-md-block " data-toggle="modal" data-target="#modalTweet">Tweet</a>
+                        <!-- MODAL TWEET -->
+                        <div class="modal fade " id="modalTweet" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content border-0">
+                                <div class="modal-header">
                                     
-                                    </div>
-                                    <div class="col-10 d-flex flex-column p-0">
-                                        <div class="w-100 d-flex justify-content-between align-items-center mb-1">
-                                            <div class="col-3 d-flex align-items-center p-0">
-                                                <i class="fa fa-picture-o text-info mr-3 fa-2x" aria-hidden="true"></i>
-                                                <i class="fa fa-smile-o text-info fa-2x" aria-hidden="true"></i>
+                                    <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true" class="text-info">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="d-flex col-12 p-0">
+                                        <div class="col-2 p-0">
+                                            <img class="img-profil rounded-circle" src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" srcset="">
+                                        </div>
+                                        <div class="col-10 d-flex flex-column p-0 mt-2">
+                                            <div class="col-12 p-0">
+                                                <textarea class="inputTweet col-12 p-0"type="text" placeholder="Quoi de beau aujourd'hui ?" autofocus></textarea>
                                             </div>
-                                            <div class="col-3">
-                                                    <a href="#" class="btn btn-info text-white btn-rounded px-4">Tweet</a>
-                
+                                        </div>
+                                    </div>
+                                    <div class="d-flex col-12 align-items-center mt-3">
+                                        <div class="col-2">
+                                        
+                                        </div>
+                                        <div class="col-10 d-flex flex-column p-0">
+                                            <div class="w-100 d-flex justify-content-between align-items-center mb-1">
+                                                <div class="col-3 d-flex align-items-center p-0">
+                                                    <i class="fa fa-picture-o text-info mr-3 fa-2x" aria-hidden="true"></i>
+                                                    <i class="fa fa-smile-o text-info fa-2x" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="col-3">
+                                                        <a href="#" class="btn btn-info text-white btn-rounded px-4">Tweet</a>
+                    
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
                     @yield('content')
-                    <div class="col-3 border-left">
+                    <div class="col-3 border-left d-none d-md-block">
                         <div class="d-flex col-10 flex-column mt-3">
                             <div class="d-flex align-items-center mt-2">
                                 <a class="btn btn-rounded btn-outline-info text-info w-100" href="{{ route('logout') }}"
@@ -109,10 +113,10 @@
                                 </div>
                                 <a class="btn btn-rounded btn-outline-info text-info font-weight-bold" href="#"
                                     onclick="event.preventDefault();
-                                    document.getElementById('follow-form').submit();">
+                                    document.getElementById('follow-form1').submit();">
                                 Follow
                                 </a>
-                                <form id="follow-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                <form id="follow-form1" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                 </form>
                             </div>
@@ -126,10 +130,10 @@
                                     </div>
                                     <a class="btn btn-rounded btn-outline-info text-info font-weight-bold" href="#"
                                         onclick="event.preventDefault();
-                                        document.getElementById('follow-form').submit();">
+                                        document.getElementById('follow-form2').submit();">
                                     Follow
                                     </a>
-                                    <form id="follow-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="follow-form2" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
                                     </form>
                                 </div>

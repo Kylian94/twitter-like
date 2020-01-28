@@ -77,6 +77,16 @@ h5 {
     height:70px;
     object-fit: cover;
 }
+.img-profil-mobile {
+    width: 40px;
+    height:40px;
+    object-fit: cover;
+}
+.inputTweetMobile {
+    border: 0;
+    font-size: 22px;
+    color: #3f3f3f;
+}
 .inputTweet {
     border: 0;
     font-size: 28px;
@@ -94,6 +104,11 @@ h5 {
 .modal-content {
     width:600px;
     border-radius:20px;
+}
+.modal-content-mobile {
+    background: #ffffff;
+    max-width:360px;
+    border-radius:15px;
 }
 .img-profil-user {
     width: 115px;
@@ -136,3 +151,25 @@ h5 {
     font-weight: bold;
     color: #6DB1EB;
 }
+
+@media screen and (max-width: 540px) {
+    .img-profil-user {
+        width: 85px;
+        height:85px;
+        object-fit: cover;
+        border: 0;
+    }
+    .edit-profile {
+        position: absolute;
+        top:250px;
+    }
+  }
+
+  .btn-mobile-tweet {
+      box-shadow: #2662bd80 0 0 5px;
+      width: 75px;
+      height:75px;
+      border-radius: 50px;
+      bottom: 80px;
+      left: 290px;
+  }

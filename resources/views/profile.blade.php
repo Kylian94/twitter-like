@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="col-6 vh-100 p-0">
+    <div class="col-12 col-md-6 vh-100 p-0">
         <div class="px-3">
             <div class="d-flex align-items-center mt-3">
                     <a href="/">
@@ -20,7 +20,7 @@
         </div>
         <div class="px-3">
             <div class="col-12 d-flex align-items-end justify-content-between edit-profile">
-                <div class="col-2 p-0">
+                <div class="col-md-2 col-3 p-0">
                     <img class="img-profil-user img-thumbnail rounded-circle" src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" srcset="">
                 </div>
                 <a href="#" class="btn btn-outline-info btn-rounded text-info mr-4 font-weight-bold px-4">Edit profile</a>
@@ -30,7 +30,7 @@
                 <p class="font-weight-light">@KylianP</p>
                 <div class="d-flex align-items-center">
                         <i class="fa fa-calendar fa-1x" aria-hidden="true"></i>
-                <p class="p-0 ml-2 m-0">À rejoint en {{Auth::user()->created_at}}</p>
+                <p class="p-0 ml-2 m-0">À rejoint {{Auth::user()->created_at->diffForHumans()}}</p>
                 </div>
                 <div class="d-flex align-items-center mt-2">
                     <a href="" class="font-weight-light"><span class="font-weight-bold">5</span> following</a>
