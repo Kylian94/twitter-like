@@ -11534,6 +11534,11 @@ h5 {
     position: absolute;
     top: 250px;
   }
+
+  .modal-content {
+    max-width: 360px;
+    border-radius: 15px;
+  }
 }
 
 .btn-mobile-tweet {

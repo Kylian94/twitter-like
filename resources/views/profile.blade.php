@@ -23,7 +23,38 @@
                 <div class="col-md-2 col-3 p-0">
                     <img class="img-profil-user img-thumbnail rounded-circle" src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" srcset="">
                 </div>
-                <a href="#" class="btn btn-outline-info btn-rounded text-info mr-4 font-weight-bold px-4">Edit profile</a>
+                <a href="#" class="btn btn-outline-info btn-rounded text-info mr-4 font-weight-bold px-4" data-toggle="modal" data-target="#modalEditProfile">Edit profile</a>
+            </div>
+            <div class="modal fade " id="modalEditProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content border-0">
+                        <div class="modal-header">
+                            
+                            <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="text-info">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                        <label for="name">Nom</label>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Nom" value="{{Auth::user()->name}}">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                        <label for="email">Adresse email</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Adresse email" value="{{Auth::user()->email}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Mot de passe</label>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" value="{{Auth::user()->password}}">
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-rounded text-white">Modifier</button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="mt-5">
                 <h4 class="font-weight-bold pt-3 m-0">Kylian</h4>
