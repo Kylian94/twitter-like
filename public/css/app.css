@@ -11562,3 +11562,8 @@ h5 {
   border-bottom: 1px solid #6DB1EB;
 }
 
+.editProfile input:focus,
+.editProfile input:active {
+  box-shadow: none;
+}
+

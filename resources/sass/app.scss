@@ -119,8 +119,6 @@ h5 {
 .banner-profile {
     position: relative;
     height: 200px;
-    //background-color: #c7c7c7;
-    
     background: url('https://images.unsplash.com/photo-1490604001847-b712b0c2f967?ixlib=rb-1.2.1&auto=format&fit=crop&w=3360&q=80');
     background-position-y: -400px;
 }
@@ -182,9 +180,13 @@ h5 {
     
 }
 .editProfile input {
+    
     border-radius :0;
     border-top:0;
     border-left:0;
     border-right:0;
     border-bottom: 1px solid #6DB1EB;
+}
+.editProfile input:focus, .editProfile input:active {
+    box-shadow: none;
 }

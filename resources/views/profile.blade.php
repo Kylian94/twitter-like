@@ -48,7 +48,7 @@
                                         <label class="font-weight-bold" for="password">Mot de passe</label>
                                         <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" value="{{Auth::user()->password}}">
                                     </div>
-                                    <button type="submit" class="btn btn-info btn-rounded text-white my-3">Modifier</button>
+                                    <button type="submit" class="btn btn-info btn-rounded text-white my-3">Modifier mes informations</button>
                                 </div>
                             </form>
                         </div>
