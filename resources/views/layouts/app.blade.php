@@ -29,10 +29,10 @@
                         <a class="nav-link text-center" href="#"><i class="fa fa-home text-info fa-2x" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
                     </div>
                     <div class="nav-item col-4 ">
-                        <a class="nav-link text-center" href="#"><i class="fa fa-picture-o text-dark fa-2x" aria-hidden="true"></i></a>
+                        <a class="nav-link text-center" href="#"><i class="fa fa-picture-o text-secondary fa-2x" aria-hidden="true"></i></a>
                     </div>
                     <div class="nav-item col-4 ">
-                        <a class="nav-link text-center" href="#"><i class="fa fa-comment-o text-dark fa-2x" aria-hidden="true"></i></a>
+                        <a class="nav-link text-center" href="#"><i class="fa fa-comment-o text-secondary fa-2x" aria-hidden="true"></i></a>
                     </div>
                 </ul>
             </nav>
