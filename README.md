@@ -12,7 +12,7 @@ Project of the third year at Webstart, Paris.
 
 Developped with laravel 6 (Back-End) - VueJs/Bootstrap 4 (Front-End)
 
-![twitter img](http://img.kp-dev.fr/twitter-img-readme.jpg) 
+![twitter img](http://img.kp-dev.fr/twitter-mockUp.jpg) 
 
 ---
 
