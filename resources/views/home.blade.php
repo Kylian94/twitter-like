@@ -60,19 +60,7 @@
                             </div>
                         </div>
                     </div>
-                    <nav class="navbar fixed-bottom navbar-light bg-light d-md-none border-top">
-                        <div class=" mr-auto mt-lg-0 d-flex justify-content-center w-100">
-                            <div class="nav-item active col-4 ">
-                                <a class="nav-link text-center" href="#"><i class="fa fa-home text-info fa-2x" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
-                            </div>
-                            <div class="nav-item col-4 ">
-                                <a class="nav-link text-center" href="#"><i class="fa fa-picture-o text-dark fa-2x" aria-hidden="true"></i></a>
-                            </div>
-                            <div class="nav-item col-4 ">
-                                <a class="nav-link text-center" href="#"><i class="fa fa-comment-o text-dark fa-2x" aria-hidden="true"></i></a>
-                            </div>
-                        </ul>
-                    </nav>
+                    
                 <span class="d-none d-md-block col-12">
                     <div class="d-flex col-12 p-0">
                         <div class="col-2 p-0">
@@ -102,12 +90,7 @@
                         </div>
                     </div>
                 </span>
-                
 
-
-
-                
-                
                 <div class="border-bottom post rounded">
                     <div class=" d-flex flex-column align-items-center justify-content-center col-12 mt-3 rounded">
                         <div class="d-flex justify-content-between col-12 pt-3">
@@ -120,16 +103,18 @@
                             </div>
                             <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
                         </div>
-                        <p class="font-weight-light">Lorem ipsum dolor, sit amet consectetur <span class="text-info">@adipisicing elit</span>. Minima sit repudiandae vero necessitatibus laudantium repellat mollitia.</p>
-                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1579833214916-783b168e55d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3360&q=80" alt="" srcset="">
-                        
-                        <div class="my-2 d-flex align-items-center font-weight-light col-12">
-                            <p class="m-0 small">Il y à 2 jours</p>
-                            <i class="fa fa-heart-o text-info fa-1x ml-5 mr-2"></i>
-                            <p class="mr-3 m-0">31,4 k</p>
+                        <div class="col-10">
+                            <p class="font-weight-light">Lorem ipsum dolor, sit amet consectetur <span class="text-info">@adipisicing elit</span>. Minima sit repudiandae vero necessitatibus laudantium repellat mollitia.</p>
+                            <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1579833214916-783b168e55d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3360&q=80" alt="" srcset="">
                             
-                            <i class="fa fa-comment-o text-info fa-1x ml-4 mr-2"></i>
-                            <p class="m-0">33</p>
+                            <div class="my-2 d-flex align-items-center font-weight-light col-12">
+                                <p class="m-0 small w-75">Il y à 2 jours</p>
+                                <i class="fa fa-heart-o text-info fa-1x ml-4 mr-1"></i>
+                                <p class="m-0 w-75">31,4 k</p>
+                                
+                                <i class="fa fa-comment-o text-info fa-1x ml-3 mr-2"></i>
+                                <p class="m-0">33</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -146,17 +131,20 @@
                             </div>
                             <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
                         </div>
-                        <p class="font-weight-light">Lorem ipsum dolor, sit amet consectetur <span class="text-info">@adipisicing elit</span>. Minima sit repudiandae vero necessitatibus laudantium repellat mollitia.</p>
-                        <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1579833214916-783b168e55d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3360&q=80" alt="" srcset="">
-                        
-                        <div class="my-2  d-flex align-items-center font-weight-light col-12">
-                            <p class="m-0 small">Il y a 2 jours</p>
-                            <i class="fa fa-heart-o text-info fa-1x ml-5 mr-2"></i>
-                            <p class="mr-3 m-0">31,4 k</p>
+                        <div class="col-10">
+                            <p class="font-weight-light">Lorem ipsum dolor, sit amet consectetur <span class="text-info">@adipisicing elit</span>. Minima sit repudiandae vero necessitatibus laudantium repellat mollitia.</p>
+                            <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1579833214916-783b168e55d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3360&q=80" alt="" srcset="">
                             
-                            <i class="fa fa-comment-o text-info fa-1x ml-4 mr-2"></i>
-                            <p class="m-0">33</p>
+                            <div class="my-2  d-flex align-items-center font-weight-light col-12">
+                                <p class="m-0 small w-75">Il y a 2 jours</p>
+                                <i class="fa fa-heart-o text-info fa-1x ml-4 mr-1"></i>
+                                <p class="m-0 w-75">31,4 k</p>
+                                
+                                <i class="fa fa-comment-o text-info fa-1x ml-3 mr-2"></i>
+                                <p class="m-0">33</p>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
 

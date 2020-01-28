@@ -50,10 +50,94 @@
                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Likes</a>
             </li>
         </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+        <div class="tab-content mb-5 " id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="border-bottom post rounded">
+                    <div class=" d-flex flex-column align-items-center justify-content-center col-12 mt-3 rounded">
+                        <div class="d-flex justify-content-between col-12 pt-3">
+                            <div class="titleCategory d-flex ">
+                                <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
+                                <div class="d-flex flex-column align-items-start justify-content-center">
+                                    <h4 class="m-0">Twitter Music</h4>
+                                    <p class="font-weight-light">@Twitter</p>
+                                </div>
+                            </div>
+                            <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
+                        </div>
+                        <div class="col-10">
+                            <p class="font-weight-light">Lorem ipsum dolor, sit amet consectetur <span class="text-info">@adipisicing elit</span>. Minima sit repudiandae vero necessitatibus laudantium repellat mollitia.</p>
+                            <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1579833214916-783b168e55d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3360&q=80" alt="" srcset="">
+                            
+                            <div class="my-2 d-flex align-items-center font-weight-light col-12">
+                                <p class="m-0 small w-75">Il y à 2 jours</p>
+                                <i class="fa fa-heart-o text-info fa-1x ml-4 mr-1"></i>
+                                <p class="m-0 w-75">31,4 k</p>
+                                
+                                <i class="fa fa-comment-o text-info fa-1x ml-3 mr-2"></i>
+                                <p class="m-0">33</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="border-bottom post rounded">
+                    <div class=" d-flex flex-column align-items-center justify-content-center col-12 mt-3 rounded">
+                        <div class="d-flex justify-content-between col-12 pt-3">
+                            <div class="titleCategory d-flex ">
+                                <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
+                                <div class="d-flex flex-column align-items-start justify-content-center">
+                                    <h4 class="m-0">Twitter Music</h4>
+                                    <p class="font-weight-light">@Twitter</p>
+                                </div>
+                            </div>
+                            <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
+                        </div>
+                        <div class="col-10">
+                            <p class="font-weight-light">Lorem ipsum dolor, sit amet consectetur <span class="text-info">@adipisicing elit</span>. Minima sit repudiandae vero necessitatibus laudantium repellat mollitia.</p>
+                            <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2555&q=80" alt="" srcset="">
+                            
+                            <div class="my-2 d-flex align-items-center font-weight-light col-12">
+                                <p class="m-0 small w-75">Il y à 2 jours</p>
+                                <i class="fa fa-heart-o text-info fa-1x ml-4 mr-1"></i>
+                                <p class="m-0 w-75">31,4 k</p>
+                                
+                                <i class="fa fa-comment-o text-info fa-1x ml-3 mr-2"></i>
+                                <p class="m-0">33</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div class="border-bottom post rounded">
+                    <div class=" d-flex flex-column align-items-center justify-content-center col-12 mt-3 rounded">
+                        <div class="d-flex justify-content-between col-12 pt-3">
+                            <div class="titleCategory d-flex ">
+                                <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
+                                <div class="d-flex flex-column align-items-start justify-content-center">
+                                    <h4 class="m-0">Twitter Music</h4>
+                                    <p class="font-weight-light">@Twitter</p>
+                                </div>
+                            </div>
+                            <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
+                        </div>
+                        <div class="col-10">
+                            <p class="font-weight-light">Lorem ipsum dolor, sit amet consectetur <span class="text-info">@adipisicing elit</span>. Minima sit repudiandae vero necessitatibus laudantium repellat mollitia.</p>
+                            <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80" alt="" srcset="">
+                            
+                            <div class="my-2 d-flex align-items-center font-weight-light col-12">
+                                <p class="m-0 small w-75">Il y à 2 jours</p>
+                                <i class="fa fa-heart-o text-info fa-1x ml-4 mr-1"></i>
+                                <p class="m-0 w-75">31,4 k</p>
+                                
+                                <i class="fa fa-comment-o text-info fa-1x ml-3 mr-2"></i>
+                                <p class="m-0">33</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
                 
     </div>

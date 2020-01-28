@@ -22,7 +22,21 @@
 </head>
 <body>
     <div id="app">
+            <nav class="navbar fixed-bottom navbar-light bg-light d-md-none border-top py-0">
+                    <div class=" mr-auto d-flex justify-content-center w-100">
+                        <div class="nav-item active col-4 ">
+                            <a class="nav-link text-center" href="#"><i class="fa fa-home text-info fa-2x" aria-hidden="true"></i><span class="sr-only">(current)</span></a>
+                        </div>
+                        <div class="nav-item col-4 ">
+                            <a class="nav-link text-center" href="#"><i class="fa fa-picture-o text-dark fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="nav-item col-4 ">
+                            <a class="nav-link text-center" href="#"><i class="fa fa-comment-o text-dark fa-2x" aria-hidden="true"></i></a>
+                        </div>
+                    </ul>
+                </nav>
         <main>
+                
                 <div class="d-flex ">
                     <div class="col-3 d-none d-md-block">
                         <div class="d-flex justify-content-center ">
