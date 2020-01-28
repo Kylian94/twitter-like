@@ -22,7 +22,7 @@
                 <div class="col-md-2 col-3 p-0">
                     <img class="img-profil-user img-thumbnail rounded-circle" src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" srcset="">
                 </div>
-                <a href="#" class="btn btn-outline-info btn-rounded text-info mr-4 font-weight-bold px-4" data-toggle="modal" data-target="#modalEditProfile">Edit profile</a>
+                <a href="#" class="btn btn-outline-info btn-rounded text-info mr-4 font-weight-bold px-4" data-toggle="modal" data-target="#modalEditProfile">Modifier mon profil</a>
             </div>
             <!-- MODAL EDIT PROFILE PART -->
             <div class="modal fade " id="modalEditProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -34,22 +34,22 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
-                                <div class="form-row">
+                            <form class="editProfile">
+                                <div class="d-flex flex-column align-items-center">
                                     <div class="form-group col-md-6">
-                                    <label for="name">Nom</label>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Nom" value="{{Auth::user()->name}}">
+                                        <label class="font-weight-bold" for="name">Nom</label>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Nom" value="{{Auth::user()->name}}">
                                     </div>
                                     <div class="form-group col-md-6">
-                                    <label for="email">Adresse email</label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Adresse email" value="{{Auth::user()->email}}">
+                                        <label class="font-weight-bold" for="email">Adresse email</label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Adresse email" value="{{Auth::user()->email}}">
                                     </div>
+                                    <div class="form-group col-md-6">
+                                        <label class="font-weight-bold" for="password">Mot de passe</label>
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" value="{{Auth::user()->password}}">
+                                    </div>
+                                    <button type="submit" class="btn btn-info btn-rounded text-white my-3">Modifier</button>
                                 </div>
-                                <div class="form-group">
-                                    <label for="password">Mot de passe</label>
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" value="{{Auth::user()->password}}">
-                                </div>
-                                <button type="submit" class="btn btn-info btn-rounded text-white">Modifier</button>
                             </form>
                         </div>
                     </div>
@@ -102,7 +102,7 @@
                             <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1579833214916-783b168e55d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3360&q=80" alt="" srcset="">
                             
                             <div class="my-2 d-flex align-items-center font-weight-light col-12">
-                                <p class="m-0 small w-75">Il y à 2 jours</p>
+                                <p class="m-0 small w-75">Il y a 2 jours</p>
                                 <i class="fa fa-heart-o text-info fa-1x ml-4 mr-1"></i>
                                 <p class="m-0 w-75">31,4 k</p>
                                 
@@ -162,7 +162,7 @@
                             <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80" alt="" srcset="">
                             
                             <div class="my-2 d-flex align-items-center font-weight-light col-12">
-                                <p class="m-0 small w-75">Il y à 2 jours</p>
+                                <p class="m-0 small w-75">Il y a 2 jours</p>
                                 <i class="fa fa-heart-o text-info fa-1x ml-4 mr-1"></i>
                                 <p class="m-0 w-75">31,4 k</p>
                                 

@@ -108,7 +108,7 @@
                         <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1579833214916-783b168e55d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3360&q=80" alt="" srcset="">
                         
                         <div class="my-2 d-flex align-items-center font-weight-light col-12">
-                            <p class="m-0 small w-75">Il y à 2 jours</p>
+                            <p class="m-0 small w-75">Il y a 2 jours</p>
                             <i class="fa fa-heart-o text-info fa-1x ml-4 mr-1"></i>
                             <p class="m-0 w-75">31,4 k</p>
                             
