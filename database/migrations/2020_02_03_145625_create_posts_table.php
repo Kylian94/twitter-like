@@ -15,6 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('user_id');
             $table->string('author');
             $table->string('desc');
             $table->string('imgTweet')->nullable();

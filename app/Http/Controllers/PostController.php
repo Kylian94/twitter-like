@@ -12,9 +12,11 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
-        $tweets = Post::orderBy('created_at', 'DESC')->get();
+        $tweets = Post::orderBy('created_at', 'desc')->get();
         return view('home', compact('tweets'));
     }
 

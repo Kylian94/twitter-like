@@ -32,7 +32,7 @@ class HomeController extends Controller
     public function index()
     {
         $users = User::all();
-        $tweets = Post::orderBy('created_at', 'DESC')->get();
+        $tweets = Post::orderBy('created_at', 'desc')->get();
         return view('home', compact('users', 'tweets'));
     }
 
@@ -48,11 +48,20 @@ class HomeController extends Controller
         return view('profile', compact('likes'));
     }
 
-    public function like()
+    public function follow(Request $request)
     {
-        $user = User::find(2);
+        $user = User::find($request->id);
         auth()->user()->follow($user);
-        error_log('Some message here.');
+        error_log('user follow.');
+        return Redirect::to('home');
+    }
+
+    public function unfollow(Request $request)
+    {
+        $user = User::find($request->id);
+        auth()->user()->unfollow($user);
+        error_log('user unfollow.');
+        return Redirect::to('home');
     }
 
     public function UploadProfile(Request $request)
@@ -114,10 +123,19 @@ class HomeController extends Controller
             'imageTweet' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
+        $imageTweetName = null;
+
+        if ($request->imageTweet) {
+
+            $imageTweetName = time() . '.' . $request->imageTweet->extension();
+            $request->imageTweet->move(public_path('images'), $imageTweetName);
+        }
+
         $tweet = new Post;
+        $tweet->user_id = Auth::user()->id;
         $tweet->author = Auth::user()->name;
         $tweet->desc = $request->desc;
-        $tweet->imgTweet = $request->imageTweet;
+        $tweet->imgTweet = $imageTweetName;
         $tweet->save();
 
         return Redirect::to('home');

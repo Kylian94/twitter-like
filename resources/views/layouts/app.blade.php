@@ -121,23 +121,36 @@
                         <h4 class="font-weight-bold">Vous connaissez peut-être..</h4>
                         
                         @foreach ($users as $user)
-                        <div class="d-flex align-items-center justify-content-between bg-light border-bottom p-2">
+                        <div  class=" align-items-center justify-content-between bg-light border-bottom p-2 {{ Auth::user()->name == $user->name ? 'd-none' : 'd-flex' }}">
                             
                             <div class="d-flex align-items-center">
-                                <img class="img-profil rounded-circle" src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=896&q=80" alt="" srcset="">
+                                @if( $user->imgProfile != null)
+                                    <img class="img-profil rounded-circle " src="{{ asset('images/' . $user->imgProfile ) }}" alt="" srcset="">
+                                @else 
+                                    <img class="img-profil rounded-circle" src="{{ asset('images/default-image-profile.jpeg') }}" alt="" srcset="">
+                                @endif
                                 <div class="d-flex flex-column align-items-start ml-3">
                                     <h4 class="font-weight-bold m-0">{{$user->name}}</h4>
                                     <p class="m-0">@Igor_Tech</p>
                                 </div>
                             </div>
-                            <a class="btn btn-rounded btn-outline-info text-info font-weight-bold" href="#"
-                                onclick="event.preventDefault();
-                                document.getElementById('follow-form2').submit();">
-                            Follow
-                            </a>
-                            <form id="follow-form2" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
+                            @if(Auth::user()->isFollowing($user->id))
+                            <form action="{{ url('unfollow') }}" method="post" >
+                                    @csrf
+                                    <input type="hidden" name="id" value={{$user->id}}>
+                                    <button type="submit" class="btn btn-rounded btn-outline-info text-info font-weight-bold">
+                                        Unfollow   
+                                    </button>
                             </form>
+                            @else 
+                            <form  action="{{ url('follow') }}" method="post" >
+                                @csrf
+                                <input type="hidden" name="id" value={{$user->id}}>
+                                <button type="submit" class="btn btn-rounded btn-outline-info text-info font-weight-bold">
+                                    Follow   
+                                </button>
+                            </form>
+                            @endif          
                         </div>
                         @endforeach
                     </div>

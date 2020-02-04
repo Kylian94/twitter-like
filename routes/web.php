@@ -13,23 +13,16 @@
 
 
 Route::get('/', function () {
-    if (Auth::check()) {
-        return view('home');
-    } else {
-        return view('welcome');
-    }
+    return view('welcome');
 });
 
 Auth::routes();
 
-//Route::resource('tweet', 'PostController');
 
 Route::post('image-upload', 'HomeController@UploadProfile')->name('image.upload.post');
-
 Route::post('tweet', 'HomeController@storeTweet')->name('tweet.post');
-
 Route::get('tweet/{id}', 'PostController@show')->name('tweet');
-
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/like', 'HomeController@like');
+Route::post('/follow', 'HomeController@follow')->name('follow');
+Route::post('/unfollow', 'HomeController@unfollow')->name('unfollow');
 Route::get('/profile', 'HomeController@profile')->name('profile');
