@@ -44,7 +44,7 @@
                     <div class="d-flex justify-content-center ">
                         <div class="d-flex col-10 flex-column mt-3">
                             <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
-                            <a href="/" class="d-flex align-items-center mt-5 {{ Request::path() == '/' ? 'text-primary' : '' }}">
+                            <a href="/home" class="d-flex align-items-center mt-5 {{ Request::path() == 'home' ? 'text-primary' : '' }}">
                                 <i class="fa fa-home fa-2x mr-3"></i>
                                 <h4 class="font-weight-bold m-0">Accueil</h4>
                             </a>

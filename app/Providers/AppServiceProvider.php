@@ -26,11 +26,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $users = User::all();
-        View::share('users', $users);
 
-        $tweets = Post::all();
-        View::share('tweets', $tweets);
+        View::share('users', User::all());
+
+
+        View::share('tweets', Post::all());
 
         // $posts = Post::all();
         // View::share('posts', $posts);

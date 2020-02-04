@@ -53,7 +53,7 @@ class HomeController extends Controller
         $user = User::find($request->id);
         auth()->user()->follow($user);
         error_log('user follow.');
-        return Redirect::to('home');
+        return back();
     }
 
     public function unfollow(Request $request)
@@ -61,7 +61,7 @@ class HomeController extends Controller
         $user = User::find($request->id);
         auth()->user()->unfollow($user);
         error_log('user unfollow.');
-        return Redirect::to('home');
+        return back();
     }
 
     public function UploadProfile(Request $request)
