@@ -110,7 +110,7 @@
                     </div>
                 @endif
                 <h4 class="font-weight-bold pt-3 m-0 mt-3">{{Auth::user()->name}}</h4>
-                <p class="font-weight-light">@KylianP</p>
+                <p class="font-weight-light">{{ '@'.Auth::user()->email }}</p>
                 <div class="d-flex align-items-center">
                         <i class="fa fa-calendar fa-1x" aria-hidden="true"></i>
                 <p class="p-0 ml-2 m-0">À rejoint {{Auth::user()->created_at->diffForHumans()}}</p>
@@ -151,7 +151,7 @@
                                     @endif
                                     <div class="d-flex flex-column align-items-start justify-content-center">
                                         <h4 class="m-0">{{$tweet->author}}</h4>
-                                        <p class="font-weight-light">@Twitter</p>
+                                        <p class="font-weight-light">{{ '@'.App\User::find($tweet->user_id)->email }}</p>
                                     </div>
                                 </div>
                                 <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>

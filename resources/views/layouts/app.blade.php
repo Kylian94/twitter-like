@@ -69,32 +69,43 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <div class="d-flex col-12 p-0">
-                                        <div class="col-2 p-0">
-                                            <img class="img-profil rounded-circle" src="{{asset('images/'.Auth::user()->imgProfile)}}" alt="" srcset="">
-                                        </div>
-                                        <div class="col-10 d-flex flex-column p-0 mt-2">
-                                            <div class="col-12 p-0">
-                                                <textarea class="inputTweet col-12 p-0"type="text" placeholder="Quoi de beau aujourd'hui ?" autofocus></textarea>
+                                    <form action="{{ route('tweet.post') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="d-flex col-12 p-0">
+                                            <div class="col-2 p-0 ">
+                                                @if( Auth::user()->imgProfile != null)
+                                                <img class="img-profil rounded-circle mr-3" src="{{ asset('images/' . Auth::user()->imgProfile ) }}" alt="" srcset="">
+                                                @else 
+                                                <img class="img-profil rounded-circle mr-3" src="{{ asset('images/default-image-profile.jpeg') }}" alt="" srcset="">
+                                                @endif
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex col-12 align-items-center mt-3">
-                                        <div class="col-2">
-                                        
-                                        </div>
-                                        <div class="col-10 d-flex flex-column p-0">
-                                            <div class="w-100 d-flex justify-content-between align-items-center mb-1">
-                                                <div class="col-3 d-flex align-items-center p-0">
-                                                    <i class="fa fa-picture-o text-info mr-3 fa-2x" aria-hidden="true"></i>
-                                                    <i class="fa fa-smile-o text-info fa-2x" aria-hidden="true"></i>
-                                                </div>
-                                                <div class="col-3">
-                                                    <a href="#" class="btn btn-info text-white btn-rounded px-4">Tweet</a>
+                                            
+                                            <div class="col-10 d-flex flex-column p-0 mt-2">
+                                                <div class="col-12 p-0">
+                                                    <textarea class="inputTweet col-12 p-0" autofocus type="text" name="desc" placeholder="Quoi de beau aujourd'hui ?"></textarea>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="d-flex col-12 align-items-center mt-3 border-bottom ">
+                                            <div class="col-1">
+                                            
+                                            </div>
+                                            <div class="col-11 d-flex flex-column p-0 ">
+                                                <div class="w-100 d-flex justify-content-between align-items-center mb-3">
+                                                    <div class="col-3 d-flex align-items-center p-0">
+                                                            <i class="fa fa-picture-o text-info mr-3 fa-2x" aria-hidden="true"></i>
+                                                            <input type="file" name="imageTweet">
+                                                        
+                                                        <i class="fa fa-smile-o text-info fa-2x" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <button type="submit" class="btn btn-info text-white btn-rounded px-4">Tweet</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -131,7 +142,7 @@
                                 @endif
                                 <div class="d-flex flex-column align-items-start ml-3">
                                     <h4 class="font-weight-bold m-0">{{$user->name}}</h4>
-                                    <p class="m-0">@Igor_Tech</p>
+                                    <p class="m-0">{{ '@'.App\User::find($tweet->user_id)->email }}</p>
                                 </div>
                             </div>
                             @if(Auth::user()->isFollowing($user->id))

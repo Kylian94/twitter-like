@@ -21,10 +21,14 @@
         <div class=" d-flex flex-column align-items-center justify-content-center col-12 mt-3 rounded">
             <div class="d-flex justify-content-between col-12 pt-3">
                 <div class="titleCategory d-flex ">
-                    <img class="img-profil rounded-circle mr-3" src="{{ asset('images/' . App\User::find($tweet->user_id)->imgProfile ) }}" alt="" srcset="">
+                    @if( App\User::find($tweet->user_id)->imgProfile != null)
+                        <img class="img-profil rounded-circle mr-3" src="{{ asset('images/' . App\User::find($tweet->user_id)->imgProfile ) }}" alt="" srcset="">
+                    @else 
+                        <img class="img-profil rounded-circle mr-3" src="{{ asset('images/default-image-profile.jpeg') }}" alt="" srcset="">
+                    @endif
                     <div class="d-flex flex-column align-items-start justify-content-center">
                         <h4 class="m-0">{{$tweet->author}}</h4>
-                        <p class="font-weight-light">fake text</p>
+                    <p class="font-weight-light">@{{App\User::find($tweet->user_id)->email}}</p>
                     </div>
                 </div>
                 <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
