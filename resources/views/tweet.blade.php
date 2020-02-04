@@ -6,7 +6,7 @@
         <!-- HEADER PART -->
         <div class="px-3">
             <div class="d-flex align-items-center mt-3">
-            <a href="/home">
+            <a href="{{ url()->previous() }}">
                     <i class="fa fa-arrow-left text-info fa-2x mr-3"></i>
                 </a>
                 <h3 class="font-weight-bold">Tweet by {{$tweet->author}}</h3>
@@ -28,7 +28,7 @@
                     @endif
                     <div class="d-flex flex-column align-items-start justify-content-center">
                         <h4 class="m-0">{{$tweet->author}}</h4>
-                    <p class="font-weight-light">@{{App\User::find($tweet->user_id)->email}}</p>
+                    <p class="font-weight-light">{{ '@'.App\User::find($tweet->user_id)->email}}</p>
                     </div>
                 </div>
                 <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
