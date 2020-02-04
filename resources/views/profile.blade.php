@@ -8,22 +8,23 @@
                 <a href="/">
                     <i class="fa fa-arrow-left text-info fa-2x mr-3"></i>
                 </a>
-                <h3 class="font-weight-bold">Kylian</h3>
+                <h3 class="font-weight-bold">{{Auth::user()->name}}</h3>
             </div>
             <p class="font-weight-light ml-5">0 tweet</p>
         </div>
         <!-- PROFILE PART -->
-        <div class="col-12 banner-profile">
-            <img class="img-cover" src="" alt="" srcset="">
+        <div class="banner-profile">
+            <img class="img-cover" src="{{ asset('images/' . Auth::user()->imgBanner) }}" alt="" srcset="">
         </div>
         <div class="px-3">
             <div class="col-12 d-flex align-items-end justify-content-between edit-profile">
                 <!-- ICON USER PART + BTN EDIT PROFILE-->
                 <div class="col-md-2 col-3 p-0">
-                    <img class="img-profil-user img-thumbnail rounded-circle" src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" srcset="">
+                <img class="img-profil-user img-thumbnail rounded-circle" src="{{ asset('images/' . Auth::user()->imgProfile) }}" alt="" srcset="">
                 </div>
                 <a href="#" class="btn btn-outline-info btn-rounded text-info mr-4 font-weight-bold px-4" data-toggle="modal" data-target="#modalEditProfile">Modifier mon profil</a>
             </div>
+        
             <!-- MODAL EDIT PROFILE PART -->
             <div class="modal fade " id="modalEditProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -34,20 +35,46 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form class="editProfile">
+                            @if (count($errors) > 0)
+                                <div class="alert alert-danger">
+                                    <strong>Whoops!</strong> There were some problems with your input.
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <form class="editProfile" action="{{ route('image.upload.post') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <div class="d-flex flex-column align-items-center">
-                                    <div class="form-group col-md-6">
+                                     <div class="form-group col-md-10">
                                         <label class="font-weight-bold" for="name">Nom</label>
                                         <input type="text" class="form-control" name="name" id="name" placeholder="Nom" value="{{Auth::user()->name}}">
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-10">
                                         <label class="font-weight-bold" for="email">Adresse email</label>
                                         <input type="email" class="form-control" id="email" name="email" placeholder="Adresse email" value="{{Auth::user()->email}}">
                                     </div>
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-10">
                                         <label class="font-weight-bold" for="password">Mot de passe</label>
                                         <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" value="{{Auth::user()->password}}">
+                                    </div> 
+                                    <div class="form-group col-md-10">
+                                    <label class="font-weight-bold" for="name">Image de couverture</label>
+                                    @if(Auth::user()->imgBanner)
+                                        <img class="img-fluid" src="{{asset('images/' . Auth::user()->imgBanner)}}" alt="">
+                                    @endif
+                                    <input type="file" name="imageBanner" value="{{Auth::user()->imgBanner}}" class="form-control">
                                     </div>
+                                    <div class="form-group col-md-10">
+                                        <label class="font-weight-bold" for="name">Image de profil</label><br>
+                                        @if(Auth::user()->imgProfile)
+                                            <img class="img-fluid img-profil-form" src="{{asset('images/' . Auth::user()->imgProfile)}}" alt="">
+                                        @endif
+                                        <input type="file" name="imageProfil" value="{{Auth::user()->imgProfile}}" class="form-control">
+                                    </div>
+                    
                                     <button type="submit" class="btn btn-info btn-rounded text-white my-3">Modifier mes informations</button>
                                 </div>
                             </form>
@@ -56,8 +83,14 @@
                 </div>
             </div>
             <!-- USER INFORMATIONS -->
-            <div class="mt-5">
-                <h4 class="font-weight-bold pt-3 m-0">{{Auth::user()->name}}</h4>
+            <div class="mt-5 pt-3">
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-success alert-block mt-4">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                            <strong>{{ $message }}</strong>
+                    </div>
+                @endif
+                <h4 class="font-weight-bold pt-3 m-0 mt-3">{{Auth::user()->name}}</h4>
                 <p class="font-weight-light">@KylianP</p>
                 <div class="d-flex align-items-center">
                         <i class="fa fa-calendar fa-1x" aria-hidden="true"></i>
@@ -145,33 +178,37 @@
             </div>
             <!-- LIKE PANEL TAB PART-->
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                <div class="border-bottom post rounded">
-                    <div class=" d-flex flex-column align-items-center justify-content-center col-12 pt-3 rounded">
-                        <div class="d-flex justify-content-between col-12 pt-3">
-                            <div class="titleCategory d-flex ">
-                                <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
-                                <div class="d-flex flex-column align-items-start justify-content-center">
-                                    <h4 class="m-0">Twitter Music</h4>
-                                    <p class="font-weight-light">@Twitter</p>
+                @foreach ($likes as $like)
+                    <div class="border-bottom post rounded">
+                        <div class=" d-flex flex-column align-items-center justify-content-center col-12 pt-3 rounded">
+                            <div class="d-flex justify-content-between col-12 pt-3">
+                                <div class="titleCategory d-flex ">
+                                    <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
+                                    <div class="d-flex flex-column align-items-start justify-content-center">
+                                        <h4 class="m-0">{{$like->name}}</h4>
+                                        <p class="font-weight-light">@Twitter</p>
+                                    </div>
                                 </div>
+                                <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
                             </div>
-                            <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
-                        </div>
-                        <div class="col-10">
-                            <p class="font-weight-light">Lorem ipsum dolor, sit amet consectetur <span class="text-info">@adipisicing elit</span>. Minima sit repudiandae vero necessitatibus laudantium repellat mollitia.</p>
-                            <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80" alt="" srcset="">
-                            
-                            <div class="my-2 d-flex align-items-center font-weight-light col-12">
-                                <p class="m-0 small w-75">Il y a 2 jours</p>
-                                <i class="fa fa-heart-o text-info fa-1x ml-4 mr-1"></i>
-                                <p class="m-0 w-75">31,4 k</p>
+                            <div class="col-10">
+                                <p class="font-weight-light">Lorem ipsum dolor, sit amet consectetur <span class="text-info">@adipisicing elit</span>. Minima sit repudiandae vero necessitatibus laudantium repellat mollitia.</p>
+                                <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80" alt="" srcset="">
                                 
-                                <i class="fa fa-comment-o text-info fa-1x ml-3 mr-2"></i>
-                                <p class="m-0">33</p>
+                                <div class="my-2 d-flex align-items-center font-weight-light col-12">
+                                    <p class="m-0 small w-75">Il y a 2 jours</p>
+                                    
+                                    <i class="fa fa-heart text-info fa-1x ml-4 mr-1"></i>
+                                    
+                                    <p class="m-0 w-75">31,4 k</p>
+                                    
+                                    <i class="fa fa-comment-o text-info fa-1x ml-3 mr-2"></i>
+                                    <p class="m-0">33</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>        
     </div>

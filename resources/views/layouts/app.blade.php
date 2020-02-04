@@ -71,7 +71,7 @@
                                 <div class="modal-body">
                                     <div class="d-flex col-12 p-0">
                                         <div class="col-2 p-0">
-                                            <img class="img-profil rounded-circle" src="https://images.unsplash.com/photo-1453396450673-3fe83d2db2c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="" srcset="">
+                                            <img class="img-profil rounded-circle" src="{{asset('images/'.Auth::user()->imgProfile)}}" alt="" srcset="">
                                         </div>
                                         <div class="col-10 d-flex flex-column p-0 mt-2">
                                             <div class="col-12 p-0">
@@ -119,28 +119,14 @@
                     <!-- SUGGESTIONS PART -->
                     <div class="mt-5">
                         <h4 class="font-weight-bold">Vous connaissez peut-être..</h4>
-                        <div class="d-flex align-items-center justify-content-between mt-3 bg-light border-bottom p-2">
-                            <div class="d-flex align-items-center">
-                                <img class="img-profil rounded-circle" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80" alt="" srcset="">
-                                <div class="d-flex flex-column align-items-start ml-3">
-                                    <h4 class="font-weight-bold m-0">Laurena</h4>
-                                    <p class="m-0">@lorena94</p>
-                                </div>
-                            </div>
-                            <a class="btn btn-rounded btn-outline-info text-info font-weight-bold" href="#"
-                                onclick="event.preventDefault();
-                                document.getElementById('follow-form1').submit();">
-                            Follow
-                            </a>
-                            <form id="follow-form1" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                            </form>
-                        </div>
+                        
+                        @foreach ($users as $user)
                         <div class="d-flex align-items-center justify-content-between bg-light border-bottom p-2">
+                            
                             <div class="d-flex align-items-center">
                                 <img class="img-profil rounded-circle" src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=896&q=80" alt="" srcset="">
                                 <div class="d-flex flex-column align-items-start ml-3">
-                                    <h4 class="font-weight-bold m-0">Igor</h4>
+                                    <h4 class="font-weight-bold m-0">{{$user->name}}</h4>
                                     <p class="m-0">@Igor_Tech</p>
                                 </div>
                             </div>
@@ -153,6 +139,7 @@
                                 @csrf
                             </form>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

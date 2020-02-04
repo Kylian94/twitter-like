@@ -4,9 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-use Overtrue\LaravelFollow\Traits\CanBeLike;
+use Overtrue\LaravelFollow\Traits\CanBeLiked;
 
 class Post extends Model
 {
-    use CanBeLike;
+    use CanBeLiked;
+
+    protected $fillable = [
+        'author', 'desc', 'imageTweet'
+    ];
 }

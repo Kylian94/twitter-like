@@ -22,5 +22,14 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Route::resource('tweet', 'PostController');
+
+Route::post('image-upload', 'HomeController@UploadProfile')->name('image.upload.post');
+
+Route::post('tweet', 'HomeController@storeTweet')->name('tweet.post');
+
+Route::get('tweet/{id}', 'PostController@show')->name('tweet');
+
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/like', 'HomeController@like');
 Route::get('/profile', 'HomeController@profile')->name('profile');

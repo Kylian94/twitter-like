@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Post;
+use App\User;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +26,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $users = User::all();
+        View::share('users', $users);
+
+        $tweets = Post::all();
+        View::share('tweets', $tweets);
+
+        // $posts = Post::all();
+        // View::share('posts', $posts);
     }
 }
