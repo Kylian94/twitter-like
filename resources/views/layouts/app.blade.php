@@ -142,7 +142,7 @@
                                 @endif
                                 <div class="d-flex flex-column align-items-start ml-3">
                                     <h4 class="font-weight-bold m-0">{{$user->name}}</h4>
-                                    <p class="m-0">{{ '@'.App\User::find($tweet->user_id)->email }}</p>
+                                    <p class="m-0">{{ '@'. $user->email }}</p>
                                 </div>
                             </div>
                             @if(Auth::user()->isFollowing($user->id))
