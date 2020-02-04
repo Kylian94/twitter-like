@@ -7,10 +7,10 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## Twitter Like - Laravel 6 - VueJs - Bootstrap 4
+## Twitter Like - Laravel 6 - Bootstrap 4
 Project of the third year at Webstart, Paris.
 
-Developped with laravel 6 (Back-End) - VueJs/Bootstrap 4 (Front-End)
+Developped with laravel 6 (Back-End) - Bootstrap 4 (Front-End)
 
 ![twitter img](http://img.kp-dev.fr/twitter-mockUp.jpg) 
 
