@@ -24,15 +24,15 @@ Start :
 
 - Install npm package 
 
-’’’ npm install ’’’
+``` npm install ```
 
 - Make migrations 
 
-’’’ php artisan migrate ’’’
+``` php artisan migrate ```
 
 - Start server
 
-’’’ php artisan serve ’’’
+``` php artisan serve ```
 
 ---
 
