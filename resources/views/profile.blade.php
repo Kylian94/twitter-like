@@ -103,9 +103,7 @@
                     <div class="alert alert-danger mt-4">
                         <strong>Whoops!</strong> Il y a une erreur !
                         <ul>
-                            
                             <li>Les images sont trop volumineuses</li>
-                        
                         </ul>
                     </div>
                 @endif
@@ -136,7 +134,6 @@
         <!-- PANEL TAB PART-->
         <div class="tab-content mb-5 " id="myTabContent">
             <!-- TWEET USER TAB PART-->
-            
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                 @foreach ($tweets as $tweet)
                     @if($tweet->author == Auth::user()->name)

@@ -48,12 +48,11 @@
                                 <i class="fa fa-home fa-2x mr-3"></i>
                                 <h4 class="font-weight-bold m-0">Accueil</h4>
                             </a>
-                        <a href="{{ route('profile') }}" class="d-flex align-items-center mt-4 {{ Request::path() == 'profile' ? 'text-primary' : '' }}">
+                            <a href="{{ route('profile') }}" class="d-flex align-items-center mt-4 {{ Request::path() == 'profile' ? 'text-primary' : '' }}">
                                 <i class="fa fa-user-o fa-2x mr-3"></i>
                                 <h4 class="font-weight-bold m-0">Profil</h4>
                             </a>
                             <div class="d-flex align-items-center mt-4">
-
                             </div>
                         </div>
                     </div>
@@ -63,7 +62,6 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content border-0">
                                 <div class="modal-header">
-                                    
                                     <button type="button" class="close p-0 m-0" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true" class="text-info">&times;</span>
                                     </button>
