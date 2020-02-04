@@ -6,17 +6,15 @@
         <!-- HEADER PART -->
         <div class="px-3">
             <div class="d-flex align-items-center mt-3">
-            <a href="{{ url()->previous() }}">
+                <a href="{{ url()->previous() }}">
                     <i class="fa fa-arrow-left text-info fa-2x mr-3"></i>
                 </a>
                 <h3 class="font-weight-bold">Tweet by {{$tweet->author}}</h3>
             </div>
-            
-
         </div>
             
         <div class="col-12 p-0">
-                <hr>
+            <hr>
         </div>
         <div class=" d-flex flex-column align-items-center justify-content-center col-12 mt-3 rounded">
             <div class="d-flex justify-content-between col-12 pt-3">
