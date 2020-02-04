@@ -22,7 +22,17 @@ Developped with laravel 6 (Back-End) - Bootstrap 4 (Front-End)
 
 Start :
 
-- 
+- Install npm package 
+
+’’’ npm install ’’’
+
+- Make migrations 
+
+’’’ php artisan migrate ’’’
+
+- Start server
+
+’’’ php artisan serve ’’’
 
 ---
 
