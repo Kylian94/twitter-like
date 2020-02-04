@@ -30,7 +30,7 @@ Start :
 
 ``` php artisan migrate ```
 
-- Start server laravel & webpack laravel Mix
+- Start laravel server & webpack laravel Mix
 
 ``` php artisan serve ``` & ``` npm run watch ```
 
