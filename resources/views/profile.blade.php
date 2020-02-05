@@ -38,7 +38,6 @@
                 </div>
                 <a href="#" class="btn btn-outline-info btn-rounded text-info mr-4 font-weight-bold px-4" data-toggle="modal" data-target="#modalEditProfile">Modifier mon profil</a>
             </div>
-        
             <!-- MODAL EDIT PROFILE PART -->
             <div class="modal fade " id="modalEditProfile" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
