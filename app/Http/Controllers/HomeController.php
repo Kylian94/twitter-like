@@ -40,12 +40,20 @@ class HomeController extends Controller
     {
         return view('welcome');
     }
+    public function followers()
+    {
+        $user = Auth::user();
+        $followers = $user->followers()->get();
+        $followings = $user->followings()->get();
+        return view('followers', compact('followers', 'followings'));
+    }
     public function profile()
     {
         $user = Auth::user();
+        $tweets = Post::orderBy('created_at', 'desc')->get();
         $likes = $user->likes()->get();
 
-        return view('profile', compact('likes'));
+        return view('profile', compact('likes', 'tweets'));
     }
 
     public function follow(Request $request)
@@ -98,10 +106,11 @@ class HomeController extends Controller
         }
 
         $user = Auth::user();
+        $password = Auth::user()->password;
         $user->name = $request->name;
         $user->email = $request->email;
 
-        if ($request->password) {
+        if ($request->password != $password) {
             $user->password = bcrypt($request->password);
         }
 
@@ -138,6 +147,6 @@ class HomeController extends Controller
         $tweet->imgTweet = $imageTweetName;
         $tweet->save();
 
-        return Redirect::to('home');
+        return back();
     }
 }

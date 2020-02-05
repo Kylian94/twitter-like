@@ -26,3 +26,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/follow', 'HomeController@follow')->name('follow');
 Route::post('/unfollow', 'HomeController@unfollow')->name('unfollow');
 Route::get('/profile', 'HomeController@profile')->name('profile');
+Route::get('/followers', 'HomeController@followers')->name('followers');
+Route::get('/followings', 'HomeController@followers')->name('followings');

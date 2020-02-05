@@ -121,119 +121,73 @@
         </div>
         <!-- NAV PANEL TAB PART-->
         <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
-            <li class="nav-item col-4 p-0 text-center">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Tweet</a>
+            <li class="nav-item col-6 p-0 text-center">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Followers</a>
             </li>
-            <li class="nav-item col-4 p-0 text-center">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Retweet</a>
-            </li>
-            <li class="nav-item col-4 p-0 text-center">
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Likes</a>
+            <li class="nav-item col-6 p-0 text-center">
+                <a class="nav-link " id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Followings</a>
             </li>
         </ul>
         <!-- PANEL TAB PART-->
         <div class="tab-content mb-5 " id="myTabContent">
             <!-- TWEET USER TAB PART-->
             <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                @foreach ($tweets as $tweet)
-                    @if($tweet->author == Auth::user()->name)
-                    <a href="{{"tweet/".$tweet->id}}" class="border-bottom post rounded">
+                @if(count($followers) == 0)
+                <div class="d-flex flex-column align-items-center just-content-center text-dark mt-4">
+                        <h4 class="mt-4">Aucuns followers pour le moment..</h4>
+                        <p>Engagez de nouvelles conversations en découvrant des personnes qui partagent les mêmes centres d'interet que vous.</p>
+                    </div>
+                @endif
+                @foreach ($followers as $follower)
+                
+                    <div class="border-bottom post rounded">
                         <div class=" d-flex flex-column align-items-center justify-content-center post col-12 pt-3 rounded">
                             <div class="d-flex justify-content-between col-12 pt-3">
-                                <div class="titleCategory d-flex ">
-                                    @if( Auth::user()->imgProfile)
-                                    <img class="img-profil rounded-circle mr-3" src="{{ asset('images/' . Auth::user()->imgProfile ) }}" alt="" srcset="">
+                                <div class="titleCategory d-flex mb-3">
+                                    @if( $follower->imgProfile)
+                                    <img class="img-profil rounded-circle mr-3" src="{{ asset('images/' . $follower->imgProfile ) }}" alt="" srcset="">
                                     @else 
                                     <img class="img-profil rounded-circle mr-3" src="{{ asset('images/default-image-profile.jpeg') }}" alt="" srcset="">
                                     @endif
                                     <div class="d-flex flex-column align-items-start justify-content-center">
-                                        <h4 class="m-0">{{$tweet->author}}</h4>
-                                        <p class="font-weight-light">{{ '@'.App\User::find($tweet->user_id)->email }}</p>
+                                        <h4 class="m-0">{{$follower->name}}</h4>
+                                        <p class="font-weight-light">{{ '@'. $follower->email }}</p>
                                     </div>
                                 </div>
                                 <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
                             </div>
                             <div class="col-10">
-                                <p class="font-weight-light">{{$tweet->desc}}</p>
-                                @if($tweet->imgTweet) 
-                                <img class="img-fluid rounded" src="{{asset('images/' . $tweet->imgTweet)}}" alt="" srcset="">
-                                @endif
-                                <div class="my-2 d-flex align-items-center font-weight-light col-12">
-                                    <p class="m-0 small w-75">{{$tweet->created_at->diffForHumans()}}</p>
-                                    <i class="fa fa-heart-o text-info fa-1x ml-4 mr-1"></i>
-                                    <p class="m-0 w-75">31,4 k</p>
-                                    
-                                    <i class="fa fa-comment-o text-info fa-1x ml-3 mr-2"></i>
-                                    <p class="m-0">33</p>
-                                </div>
                             </div>
                         </div>
-                    </a>
-                    @endif    
+                    </div>  
                 @endforeach
+                
+                
             </div>
             <!-- RETWEET USER TAB PART-->
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <div class="border-bottom post rounded">
-                    <div class=" d-flex flex-column align-items-center justify-content-center col-12 pt-3 rounded">
-                        <div class="d-flex justify-content-between col-12 pt-3">
-                            <div class="titleCategory d-flex ">
-                                <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
-                                <div class="d-flex flex-column align-items-start justify-content-center">
-                                    <h4 class="m-0">Twitter Music</h4>
-                                    <p class="font-weight-light">@Twitter</p>
-                                </div>
-                            </div>
-                            <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
-                        </div>
-                        <div class="col-10">
-                            <p class="font-weight-light">Lorem ipsum dolor, sit amet consectetur <span class="text-info">@adipisicing elit</span>. Minima sit repudiandae vero necessitatibus laudantium repellat mollitia.</p>
-                            <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1513106580091-1d82408b8cd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2555&q=80" alt="" srcset="">
-                            
-                            <div class="my-2 d-flex align-items-center font-weight-light col-12">
-                                <p class="m-0 small w-75">Il y à 2 jours</p>
-                                <i class="fa fa-heart-o text-info fa-1x ml-4 mr-1"></i>
-                                <p class="m-0 w-75">31,4 k</p>
-                                
-                                <i class="fa fa-comment-o text-info fa-1x ml-3 mr-2"></i>
-                                <p class="m-0">33</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- LIKE PANEL TAB PART-->
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                @foreach ($likes as $like)
+                
+                @foreach ($followings as $following)
                     <div class="border-bottom post rounded">
-                        <div class=" d-flex flex-column align-items-center justify-content-center col-12 pt-3 rounded">
+                        <div class=" d-flex flex-column align-items-center justify-content-center post col-12 pt-3 rounded">
                             <div class="d-flex justify-content-between col-12 pt-3">
-                                <div class="titleCategory d-flex ">
-                                    <i class="fa fa-bandcamp text-info fa-3x mr-3"></i>
+                                <div class="titleCategory d-flex mb-3">
+                                    @if( $following->imgProfile)
+                                    <img class="img-profil rounded-circle mr-3" src="{{ asset('images/' . $following->imgProfile ) }}" alt="" srcset="">
+                                    @else 
+                                    <img class="img-profil rounded-circle mr-3" src="{{ asset('images/default-image-profile.jpeg') }}" alt="" srcset="">
+                                    @endif
                                     <div class="d-flex flex-column align-items-start justify-content-center">
-                                        <h4 class="m-0">{{$like->name}}</h4>
-                                        <p class="font-weight-light">@Twitter</p>
+                                        <h4 class="m-0">{{$following->name}}</h4>
+                                        <p class="font-weight-light">{{ '@'. $following->email }}</p>
                                     </div>
                                 </div>
                                 <i class="fa fa-bandcamp text-info fa-2x mr-3"></i>
                             </div>
                             <div class="col-10">
-                                <p class="font-weight-light">Lorem ipsum dolor, sit amet consectetur <span class="text-info">@adipisicing elit</span>. Minima sit repudiandae vero necessitatibus laudantium repellat mollitia.</p>
-                                <img class="img-fluid rounded" src="https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80" alt="" srcset="">
-                                
-                                <div class="my-2 d-flex align-items-center font-weight-light col-12">
-                                    <p class="m-0 small w-75">Il y a 2 jours</p>
-                                    
-                                    <i class="fa fa-heart text-info fa-1x ml-4 mr-1"></i>
-                                    
-                                    <p class="m-0 w-75">31,4 k</p>
-                                    
-                                    <i class="fa fa-comment-o text-info fa-1x ml-3 mr-2"></i>
-                                    <p class="m-0">33</p>
-                                </div>
                             </div>
                         </div>
-                    </div>
+                    </div>     
                 @endforeach
             </div>
         </div>        
