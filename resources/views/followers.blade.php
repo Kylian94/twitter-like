@@ -5,7 +5,7 @@
         <!-- HEADER PART -->
         <div class="px-3">
             <div class="d-flex align-items-center mt-3">
-                <a href="/home">
+                <a href="{{ url()->previous() }}">
                     <i class="fa fa-arrow-left text-info fa-2x mr-3"></i>
                 </a>
                 <h3 class="font-weight-bold">{{Auth::user()->name}}</h3>
@@ -139,7 +139,6 @@
                     </div>
                 @endif
                 @foreach ($followers as $follower)
-                
                     <div class="border-bottom post rounded">
                         <div class=" d-flex flex-column align-items-center justify-content-center post col-12 pt-3 rounded">
                             <div class="d-flex justify-content-between col-12 pt-3">
@@ -161,8 +160,6 @@
                         </div>
                     </div>  
                 @endforeach
-                
-                
             </div>
             <!-- RETWEET USER TAB PART-->
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
